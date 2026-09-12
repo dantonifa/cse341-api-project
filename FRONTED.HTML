@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 341 Frontend Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; color: #333; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 400px; }
+        img { max-width: 100%; height: auto; margin-top: 15px; border-radius: 4px; display: block; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>CSE 341 Learning Activity</h1>
+    <div class="card">
+        <h2 id="message">Loading data from backend...</h2>
+        <h3>Links:</h3>
+        <ul id="links-list"></ul>
+        <h3>Image:</h3>
+        <img id="backend-image" src="" alt="Backend visual placeholder" />
+    </div>
+
+    <script>
+        // Fetch data from your running backend server
+        fetch('http://localhost:8080/data')
+            .then(response => response.json())
+            .then(data => {
+                // Update UI with the JSON response fields
+                document.getElementById('message').innerText = data.message;
+                
+                const linksList = document.getElementById('links-list');
+                linksList.innerHTML = ''; // Clear loading text
+                data.links.forEach(link => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+                    linksList.appendChild(li);
+                });
+
+                document.getElementById('backend-image').src = data.image;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                document.getElementById('message').innerText = 'Failed to connect to backend server.';
+            });
+    </script>
+</body>
+</html>
