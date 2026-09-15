@@ -1,0 +1,8 @@
+### Get all contacts from your MongoDB database
+GET http://localhost:8080/contacts
+
+###
+
+### Get a single contact by ID
+### (Note: Replace this placeholder ID with a real '_id' from your database output above)
+GET http://localhost:8080/contacts/650c1f5b8f2d2b4a1c8b4567
