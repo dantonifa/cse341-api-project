@@ -1,0 +1,23 @@
+[
+  {
+    "professionalName": "David Antonio Fajardo Ponce",
+    "nameLink": {
+      "firstName": "DAVID",
+      "url": "https://github.com"
+    },
+    "base64Image": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+    "firstName": "DAVID",
+    "primaryDescription": " is a Science Educator & Web Developer based in Honduras.",
+    "workDescription1": "I am currently an Instructor at Instituto Salvador Moncada.",
+    "workDescription2": "I enjoy creating clean, scalable web code and learning new backend technologies.",
+    "linkTitleText": "Check out my professional work below:",
+    "linkedInLink": {
+      "url": "https://www.linkedin.com/in/david-antonio-fajardo-ponce",
+      "text": "LinkedIn"
+    },
+    "githubLink": {
+      "url": "https://github.com/dantonifa"
+      "text": "GitHub"
+    }
+  }
+]
